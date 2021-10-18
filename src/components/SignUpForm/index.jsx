@@ -4,6 +4,7 @@ import { useHistory } from "react-router";
 import * as yup from "yup";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import { MyForm } from "./styles";
 
 export default function SignUpForm() {
   const formSchema = yup.object().shape({
@@ -33,12 +34,11 @@ export default function SignUpForm() {
   });
 
   const submitForm = (data) => {
-    console.log(data);
-    history.push("/home");
+    history.push(`/home/${data.name}`);
   };
 
   return (
-    <form onSubmit={handleSubmit(submitForm)}>
+    <MyForm onSubmit={handleSubmit(submitForm)}>
       <TextField
         variant="standard"
         label="Nome"
@@ -72,6 +72,6 @@ export default function SignUpForm() {
       <Button variant="outlined" type="submit">
         Cadastrar
       </Button>
-    </form>
+    </MyForm>
   );
 }

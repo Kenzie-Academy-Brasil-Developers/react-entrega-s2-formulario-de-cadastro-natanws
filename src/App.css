@@ -22,14 +22,6 @@
     font-size: calc(10px + 2vmin);
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 400px;
-}
-
 .MuiTextField-root {
     width: 250px;
 }

@@ -1,10 +1,11 @@
 import SignUpForm from "../../components/SignUpForm";
+import { SignupContainer } from "./styles";
 
 const SignUp = () => {
   return (
-    <div>
+    <SignupContainer>
       <SignUpForm />
-    </div>
+    </SignupContainer>
   );
 };
 
